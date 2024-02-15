@@ -113,7 +113,7 @@ header:has(.menu-lateral-aberto) .barra:nth-child(3) {
 }
 
 .fundo-menu-visivel {
-    cursor: url(/assets/images/x_thin_icon_171414.png) 60 60, none;
+    cursor: url(/assets/images/x_thin_icon_171414.png) 60 60, auto;
     visibility: visible;
     opacity: 1;
     transition-delay: .5s;

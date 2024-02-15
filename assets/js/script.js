@@ -86,11 +86,11 @@ const cancelarConfiguracao = () => {
     abrirFecharModalConfig();
     const range = document.getElementById('range');
     const btn__mudaTema = document.getElementById('btn__mudaTema');
-    modoClaro != modoClaroProvisorio ? mudarTema(modoClaro) : null;
     fonteProvisoria = fonteAtual;
     
     setTimeout(() => {
         obterValorRange(tamanhoFonte);
+        modoClaro != modoClaroProvisorio ? mudarTema(modoClaro) : null;
         range.value = tamanhoFonte;
         btn__mudaTema.checked = modoClaro;
         Object.values(selecao_fontes.children).forEach((option, index) => {
