@@ -373,8 +373,7 @@ header:has(.menu-lateral-aberto) figure img {
     background-color: rgb(68, 135, 193);
     color: #e7e7e7;
     min-width: 5.5rem;
-    margin-inline: 2rem;
-    margin-bottom: .4rem;
+    margin: 0 2rem .4rem;
     padding: .4rem;
     border: none;
     border-radius: .15rem;
@@ -396,7 +395,7 @@ header:has(.menu-lateral-aberto) figure img {
     margin: 0 auto;
 }
 
-.copy i { 
+.copy i, sub { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -409,22 +408,17 @@ sub {
 
 main { padding: 1rem; }
 
-h2 {
-    background: linear-gradient(to right bottom, #37b9f1, #8739f9 50%);
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    margin: 1rem auto;
-    font-size: calc(var(--tamanhoFonte) * 2);
+main h2 {
+    color: #0f9;
+    font-size: calc(var(--tamanhoFonte) * 1.8);
+    hyphens: auto;
+    word-wrap: break-word;
 }
 
 main p {
     color: var(--corPrimaria);
     font-size: var(--tamanhoFonte);
 }
-
-main article { overflow-x: auto; }
 
 main article span {
     margin: 1rem 0;
@@ -435,6 +429,7 @@ main article span {
 
 .explicacao {
     text-align: justify;
+    word-wrap: break-word;
     padding-inline-end: .5rem;
     text-indent: 1rem;
 }
@@ -466,17 +461,16 @@ main img {
     overflow-x: auto;
     border: 5px ridge rgb(100, 105, 105);
     box-shadow: 0 0 5px rgb(0, 0, 0);
-
 }
 
 .caixa-codigo p {
     white-space: pre;
     position: relative;
+    right: 5rem;
     font-size: clamp(12px, 4vw, 16px);
     letter-spacing: 1px;
     color: #e7e7e7;
     font-family: 'Times New Roman', Times, serif;
-    right: 5rem;
 }
 
 .caixa-codigo li {
@@ -532,22 +526,24 @@ main img {
 }
 
 .footer-principal .logo {
-    width: fit-content;
+    width: max-content;
+    text-align: center;
     margin: auto;
-    scale: .9;
 }
 
 .footer-principal sub {
     color: var(--corLetrasModalConfig);
     margin-bottom: 1rem;
-    scale: .9;
+    font-size: .7rem;
     cursor: default;
 }
 
 .campo-animado {
-    max-width: 300px;
+    max-width: 250px;
     margin: auto;
     color: var(--corLetrasModalConfig);
+    white-space: nowrap;
+    font-size: 13px;
 }
 
 #texto__animado {
@@ -562,7 +558,11 @@ main img {
     display: inline-block;
 }
 
-@keyframes piscar {
+.logo, .logo sup, .campo-animado, #texto__animado {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes piscar { 
     50% { border-color: transparent; }
 }
 
@@ -574,15 +574,15 @@ main img {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--corBarraRolagem);
+    border-radius: 1rem;
 }
 
 @media screen and (max-width: 1000px) {
     .menu-lateral { 
         overflow-y: auto; 
     }
-
     main figure { 
-        height: 200px; 
+        height: 200px;
     }
 }
 
@@ -591,10 +591,10 @@ main img {
         max-width: 270px;
         right: -270px;
     }
-
-    .menu-lateral-aberto { right: 0; }
-
+    .menu-lateral-aberto { 
+        right: 0;
+    }
     .popup-config { 
-        padding: 1rem;
+        padding: .7rem;
     }
 }

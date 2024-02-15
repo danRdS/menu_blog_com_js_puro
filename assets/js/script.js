@@ -113,7 +113,7 @@ const salvarConfiguracao = () => {
     modoClaro = modoClaroProvisorio;
 }
 
-// área conteúdo principal do site
+// Área conteúdo principal do site
 const lista = document.getElementById('lista');
 const opcoesLista = lista.children;
 

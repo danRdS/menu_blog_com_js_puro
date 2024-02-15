@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +81,7 @@
                         <i>DRS</i>
                         <sup>&reg;</sup>
                     </h1>
-                    <sub>produzido por Daniel</sub>
+                    <sub>DRS Produções&reg;</sub>
                 </footer>
             </article>
         </section>
@@ -122,21 +122,21 @@
                 Veremos neste pequeno artigo algumas maneiras de se percorrer elementos filhos de um elemento
                 pai em <code><b>Javascript</b></code>. Isto é muito útil para poder realizar ações específicas
                 de forma individual ou conjunta em cada um dos elementos filhos de forma dinâmica dependendo da 
-                interação do usuário com eles. Vamos a um trecho de código <code translate="no"><b>HTML</b></code> para
+                interação do usuário com eles. Vamos a um trecho de código <code><be translate="no">HTML</be></code> para
                 iniciarmos nossa exemplificação:
             </p>
             <figure><img src="assets/images/foto_codigo2.jpeg" alt="foto_codigo"></figure>
             <p class="explicacao">
-                Neste exmplo, foi formado um pequeno menu (criado com a tag <code translate="no"><b>ul</b></code>) no 
-                qual contém 4 elementos do tipo <code translate="no"><b>li</b></code>. Cada um deles contém um evento de
-                clique (<code translate="no"><b><i>onclick</i></b></code>), chamado "<i>mudarCor</i>" enviando o elemento 
+                Neste exmplo, foi formado um pequeno menu (criado com a tag <cod><b translate="no">ul</b></cod>) no 
+                qual contém 4 elementos do tipo <code><b translate="no">li</b></code>. Cada um deles contém um evento de
+                clique (<code><b><i translate="no">onclick</i></b></code>), chamado "<i>mudarCor</i>" enviando o elemento 
                 alvo do clique como parâmetro desta função para que através dele seja possível saber qual dos elementos
                 foi clicado para realizar qualquer que seja a reação ao clique daquele evento. Em nosso caso, irá
                 fazer a estilização dele.
             </p>
             <span>Existem algumas formas de percorrer elementos filhos de um elemento pai, dentre elas:</span>
             <p class="explicacao">
-                Pegando o elemento pai e o percorre com o <code translate="no"><b>Object.values()</b></code> pra encontrar seus
+                Pegando o elemento pai e o percorre com o <code><b translate="no">Object.values()</b></code> pra encontrar seus
                 filhos. Dessa foma será possível ter acesso a todas as propriedades dos elementos filhos.
             </p>
             <section class="caixa-codigo">
@@ -180,7 +180,7 @@
             <h2>Renderização</h2>
             <p class="explicacao">
                 Deste modo, assim ficará a visualização do elemento pai com seus elementos filhos após a estilização via
-                <code translate="no"><b>CSS</b></code> e configuração via <code translate="no"><b>Javascript</b></code>: 
+                <code><b translate="no">CSS</b></code> e configuração via <code><b translate="no">Javascript</b></code>: 
             </p>
             <ul id="lista">
                 <li class="opcao mudar-cor-li" onclick="mudarCor(event)">Brasil</li>
@@ -192,7 +192,7 @@
     </main>
     <footer class="footer-principal">
         <h2 class="logo">
-            <i>DRS<sup>&reg;</sup></i>
+            DRS<sup>&reg;</sup>
         </h2>
         <sub>DRS Produções&reg;</sub>
         <p class="campo-animado">
