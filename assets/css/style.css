@@ -533,6 +533,7 @@ main img {
 
 .footer-principal sub {
     color: var(--corLetrasModalConfig);
+    width: max-content;
     margin-bottom: 1rem;
     font-size: .7rem;
     cursor: default;
@@ -574,7 +575,6 @@ main img {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--corBarraRolagem);
-    border-radius: 1rem;
 }
 
 @media screen and (max-width: 1000px) {
