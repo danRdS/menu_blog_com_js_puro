@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="website icon" href="assets/images/blog.png">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">DRS</h1>
+        <button type="button" class="btn__menu" onclick="abrirFecharMenu()">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </button>
+        <div class="fundo-menu" onclick="fecharMenu()"></div>
+        <section class="menu-lateral">
+            <figure>
+                <img src="assets/images/imagem6.jpeg" alt="imagem" id="imagemMenu">
+            </figure>
+            <article>
+                <ul>
+                    <li class="bloco-opcao-menu">
+                        <span>Projetos:</span>                        
+                        <a href="https://danrds.github.io/biblia/" class="area-opcao" target="_blank">
+                            <i class="fa-solid fa-book-bible"></i>
+                            <span class="opcao-menu">Biblia</span>
+                        </a>
+                        <a href="https://danrds.github.io/slidesComJs/" class="area-opcao" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-slideshow" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M15 6l.01 0" />
+                                <path d="M3 3m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" />
+                                <path d="M3 13l4 -4a3 5 0 0 1 3 0l4 4" />
+                                <path d="M13 12l2 -2a3 5 0 0 1 3 0l3 3" />
+                                <path d="M8 21l.01 0" />
+                                <path d="M12 21l.01 0" />
+                                <path d="M16 21l.01 0" />
+                              </svg>
+                            <span class="opcao-menu">Slides</span>
+                        </a>
+                        <a href="https://danrds.github.io/pokedexDiretoApi/" class="area-opcao" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pokeball" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M3 12h6" />
+                                <path d="M15 12h6" />
+                              </svg>
+                            <span class="opcao-menu">Pokédex</span>
+                        </a>
+                    </li>
+                    <li class="bloco-opcao-menu">
+                        <span>Visite-nos:</span>                        
+                        <a href="https://github.com/danRdS" class="area-opcao" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="opcao-menu">Github</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/daniel-ribeiro-da-silva-37b313239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="area-opcao" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="opcao-menu">Linkedin</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCEkcqlkgSlB5-lPjT4mD0oA" class="area-opcao" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span class="opcao-menu">Youtube</span>
+                        </a>
+                    </li>
+                    <li class="bloco-opcao-menu">
+                        <span>Administração:</span>                        
+                        <button class="area-opcao" onclick="abrirFecharModalConfig()">
+                            <i class="fa-solid fa-gear"></i>
+                            Configurações
+                        </button>
+                    </li>
+                </ul>
+                <footer>
+                    <h1 class="copy">
+                        <i>DRS</i>
+                        <sup>&reg;</sup>
+                    </h1>
+                    <sub>produzido por Daniel</sub>
+                </footer>
+            </article>
+        </section>
+        <div class="modalConfig" id="modalConfig" onclick="fecharModalConfig(event)">
+            <section class="popup-config">
+                <h3>
+                    <i class="fa-solid fa-gear"></i>
+                    Configurações
+                </h3>
+                <div class="caixa-fontes">
+                    <span class="titulo">Fontes: </span>
+                    <select name="selecao_fontes" id="selecao_fontes">
+                        <option value="Segoe UI">Segoe UI</option>
+                        <option value="monospace">monospace</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>                        
+                        <option value="cursive">cursive</option>
+                    </select>
+                </div>
+                <span>Alterar tamanho da fonte:</span>
+                <section class="area-input-range">
+                    <input type="range" name="range" id="range" value="16" min="10" max="50" oninput="obterValorRange(this.value)">
+                    <label for="range" id="valorTamanhoFonte">16</label>
+                </section>
+                <span>Desabilitar modo noturno:</span>
+                <input type="checkbox" id="btn__mudaTema" oninput="mudarTema(this.checked)">
+                <section class="area-botoes-config">
+                    <button type="button" onclick="cancelarConfiguracao()">Cancelar</button>
+                    <button type="button" onclick="salvarConfiguracao()">Salvar</button>
+                </section>
+            </section>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Percorrer elementos</h2>
+            <p class="explicacao">
+                Veremos neste pequeno artigo algumas maneiras de se percorrer elementos filhos de um elemento
+                pai em <code><b>Javascript</b></code>. Isto é muito útil para poder realizar ações específicas
+                de forma individual ou conjunta em cada um dos elementos filhos de forma dinâmica dependendo da 
+                interação do usuário com eles. Vamos a um trecho de código <code translate="no"><b>HTML</b></code> para
+                iniciarmos nossa exemplificação:
+            </p>
+            <figure><img src="assets/images/foto_codigo2.jpeg" alt="foto_codigo"></figure>
+            <p class="explicacao">
+                Neste exmplo, foi formado um pequeno menu (criado com a tag <code translate="no"><b>ul</b></code>) no 
+                qual contém 4 elementos do tipo <code translate="no"><b>li</b></code>. Cada um deles contém um evento de
+                clique (<code translate="no"><b><i>onclick</i></b></code>), chamado "<i>mudarCor</i>" enviando o elemento 
+                alvo do clique como parâmetro desta função para que através dele seja possível saber qual dos elementos
+                foi clicado para realizar qualquer que seja a reação ao clique daquele evento. Em nosso caso, irá
+                fazer a estilização dele.
+            </p>
+            <span>Existem algumas formas de percorrer elementos filhos de um elemento pai, dentre elas:</span>
+            <p class="explicacao">
+                Pegando o elemento pai e o percorre com o <code translate="no"><b>Object.values()</b></code> pra encontrar seus
+                filhos. Dessa foma será possível ter acesso a todas as propriedades dos elementos filhos.
+            </p>
+            <section class="caixa-codigo">
+                <p>
+                    const lista = document.getElementById('lista');
+                    const opcoesLista = lista.children;
+
+                    Object.values(opcoesLista).forEach(opcao => {
+                        console.log(opcao);
+                    })
+                </p>
+            </section>
+            <p class="explicacao">
+                Pega o primeiro elemento e o chama por intermédio de uma função recursiva
+                que percorre os próximos elementos com iteração:
+            </p>
+            <section class="caixa-codigo">
+                <p>
+                    const primeiraOpcaoLista = document.querySelector('li');
+                    let index = 0;
+                    
+                    const apresentarOpcoes = elemento => {
+                        console.log(elemento);    
+                        index = (index + 1) % opcoesLista.length;
+                        if(index) {
+                            const proximo = elemento.nextElementSibling;
+                            apresentarOpcoes(proximo);
+                        }
+                    }
+
+                    apresentarOpcoes(primeiraOpcaoLista);
+                </p>
+            </section>            
+            <p class="explicacao">Assim será exibido no console após a varredura em ambos os casos:</p>
+            <ul id="segundaLista" class="caixa-codigo">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h2>Renderização</h2>
+            <p class="explicacao">
+                Deste modo, assim ficará a visualização do elemento pai com seus elementos filhos após a estilização via
+                <code translate="no"><b>CSS</b></code> e configuração via <code translate="no"><b>Javascript</b></code>: 
+            </p>
+            <ul id="lista">
+                <li class="opcao mudar-cor-li" onclick="mudarCor(event)">Brasil</li>
+                <li class="opcao" onclick="mudarCor(event)">Argentina</li>
+                <li class="opcao" onclick="mudarCor(event)">Uruguai</li>
+                <li class="opcao" onclick="mudarCor(event)">Colômbia</li>
+            </ul>
+        </article>
+    </main>
+    <footer class="footer-principal">
+        <h2 class="logo">
+            <i>DRS<sup>&reg;</sup></i>
+        </h2>
+        <sub>DRS Produções&reg;</sub>
+        <p class="campo-animado">
+            Este site foi produzido 
+            <span id="texto__animado"></span>
+        </p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
